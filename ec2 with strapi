@@ -1,0 +1,26 @@
+Step 1: EC2 Instance Provisioning using Terraform
+
+Terraform configuration files were created to define AWS infrastructure.
+An EC2 instance was provisioned using Terraform with the required instance type, AMI, security group, and key pair configuration.
+A .pem key file was generated with the terragorm to enable secure SSH access to the EC2 instance.
+Terraform was executed using terraform init and terraform apply to create the infrastructure.
+
+Step 2: Secure SSH Access to EC2 Instance
+After successful instance creation, the EC2 public IP address was obtained from AWS Console.
+The EC2 instance was accessed securely from the local system using SSH and the generated .pem key file.
+
+Step 3: Installation of Node.js and Required Dependencies
+The EC2 instance was updated to ensure all system packages were up to date.
+Node.js (compatible with Strapi requirements) and npm were installed.
+Additional build and system dependencies required by Strapi were installed to support native module compilation.
+
+Step 4: Strapi Application Installation
+A new Strapi project was created using the Strapi CLI.
+Required project dependencies were installed using npm.
+Swap memory was configured on the EC2 instance to avoid memory-related installation issues.
+
+Step 5: Running and Accessing the Strapi Application
+The Strapi application was started on the default port (1337).
+Necessary inbound rules were configured in the EC2 security group to allow access to port 1337.
+The application was accessed using the EC2 public IP address via a web browser.
+
